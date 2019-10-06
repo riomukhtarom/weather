@@ -1,4 +1,4 @@
-package com.rio.weather
+package com.rio.popularmovie
 
 import org.junit.Test
 

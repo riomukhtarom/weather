@@ -8,12 +8,19 @@ android {
     compileSdkVersion 28
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.rio.weather"
+        applicationId "com.rio.popularmovie"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        //API KEY
+        buildConfigField("String", "TMDB_API_KEY", '"a3a33c88b2b3a2926df3a639c0f3e6d6"')
+        //BASE URL
+        buildConfigField("String", "BASE_URL", '"https://api.themoviedb.org/3/"')
+        //BASE URL POSTER
+        buildConfigField("String", "BASE_URL_POSTER", '"https://image.tmdb.org/t/p/"')
     }
     buildTypes {
         release {
@@ -34,4 +41,9 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.2'
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0-alpha05'
+    annotationProcessor 'androidx.lifecycle:lifecycle-compiler:2.2.0-alpha05'
 }
